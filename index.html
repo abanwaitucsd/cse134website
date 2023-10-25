@@ -143,15 +143,16 @@ function greet() {
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="40" fill="red" />
             </svg>
-        </details>
-        
+        </details>   
 
         <br>
+
+        <!-- Doesn't pass validation because action has no value, but I don't need to save this form -->
         <form action="" method="get" class="form-example">
             <fieldset>
                 <legend>Personal Information</legend>
-                <label>My name is <input id="name-input" type="text" autocomplete="name" autofocus maxlength="30" placeholder="Your Name"></label>
-                <label>My age is <input id="age-input" type="number" autocomplete="age" autofocus maxlength="3" placeholder="Your Age"></label>
+                <label>My name is <input id="name-input" type="text" autocomplete="name" maxlength="30" placeholder="Your Name"></label>
+                <label>My age is <input id="age-input" type="number" placeholder="Your Age"></label>
 
                 <br><br>
 
@@ -198,7 +199,7 @@ function greet() {
 
     <br>
 
-    <table border="1">
+    <table>
         <caption>Sample Table Caption</caption>
         <colgroup>
             <col style="background-color: lightblue;">
