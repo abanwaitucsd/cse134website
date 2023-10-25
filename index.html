@@ -5,10 +5,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armaan Banwait Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .boxed-text {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Armaan Banwait</h1>
+    <header>
+        <h1><span class = "boxed-text">Armaan Banwait Porfolio</span></h1>
+    </header>
+
+    <div>
+        <p><b><i>Junior Software Engineer</i></b></p>
+        <pre>
+            <code>
+function greet() {
+    console.log("Please hire me!");
+}
+            </code>
+        </pre>
+    </div>
+
+    <hr>
+
+    <section>
+        <h2>Education</h2>
+            <h3>University of California, San Diego</h3>
+            <p>
+            Bachelor of Science in Computer Science | Minor in Economics <br>
+            3.8 GPA | March 2024 (expected) <br>
+            Relevant Coursework:
+            </p>
+            <ol>
+                <li>Introduction to Programming and Computational Problem-Solving</li>
+                <li>Advanced Data Structures and Object-Oriented Design</li>
+                <li>Discrete Mathematics</li>
+                <li>Design and Analysis of Algorithms</li>
+                <li>Computer Organization and Systems Programming</li>
+                <li>Software Engineering</li>
+                <li>Operating Systems</li>
+                <li>Computer Vision</li>
+                <li>Machine Learning</li>
+                <li>Database System Principles</li>
+            </ol>
+            <picture>
+                <source srcset="images\Geisel_Library_2.jpg" media="(min-width: 800px)">
+                <img src="images\Geisel_Library_2_small.jpg" alt="UCSD's Geisel Library">
+            </picture>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Skills</h2>
+            <p>
+                Java, Python, JavaScript, C, C#, Android Studio, VS Code, Eclipse, CLion,
+                IntelliJ, Vim, JUnit, ZenHub, GitHub, GDB, Valgrind, CV, agile development,
+                and team programming.
+            </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <main>
+        <h2>Work Experience</h2>
+            <h3>Marketing and Economic Development Internship | Morgan Hill, CA</h3>
+            <p><strong><em>City of Morgan Hill | June 2019 - August 2019</em></strong></p>
+            <ul>
+                <li>Created promotional materials for various city events and programs which was displayed in city facilities and distributed publicly</li>
+                <li>Clerical work to aid the process of prospective businesses opening in Morgan Hill</li>
+                <li>Gained experience in working in office environment, communicating with teammates, and meeting deadlines</li>
+            </ul>
+            <h3>SDET Internship | Seattle, WA</h3>
+            <p><strong><em>Starbucks | June 2023 - September 2023</em></strong></p>
+            <ul>
+                <li>Created the backend for custom customer journey creation UI</li>
+                <li>Database for step and scenario storage created using Microsoft Cosmos DB</li>
+                <li>API created in C# on .NET and hosted on Kubernetes cluster</li>
+                <li>Created UI using API for crud and dependency searching capabilities</li>
+            </ul>
+        </main>
+    </section>
+
+    <hr>
+
+    <section>
+    <h2>Projects</h2>
+        <h3>Birds of a Feather</h3>
+            <p>Android app utilizing bluetooth to help students find groups in classrooms</p>
+            <ul>
+                <li>Java full-stack developer, programmed local storage of student profiles and designed UI</li>
+                <li>Led organization of in person meetings and collaboration between teams</li>
+            </ul>
+        <h3>Triton Robotics Auto Aim</h3>
+            <p>Image detection and camera movement</p>
+            <ul>
+                <li>Computer Vision team in Triton Robotics Club, developed in C</li>
+                <li>Software for robot's camera to detect enemy robot's armor plates</li>
+                <li>Algorithm for camera movement and shooting upon detection using Kalman filter</li>
+            </ul>
+        <h3>Bonkers</h3>
+            <p>Puzzle platformer</p>
+            <ul>
+                <li>Pair programmed in python during UCSD CS summer program</li>
+                <li>Pygame and object oriented program for level design and enemies</li>
+            </ul>
+        <h3>TSG</h3>
+            <p>Survival space invaders type shooter game</p>
+            <ul>
+                <li>Hobby project in JavaScript</li>
+                <li>Object oriented programming for weapon exchange and design of enemy behavior</li>
+            </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>
+            <p>Enjoy a cat video while you're here!</p>
+        </h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zPpO-PuMCS0?si=qSDZEHx_myLM-ahW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+        <video src="videos/Bros comfortable.mp4" width="560" height="315" controls></video>
+        <br>
+        <audio src="audios/Meow Sound Effect.mp3" controls></audio>
+
+        <br>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="red" />
+        </svg>
+    </section>
+
+    <hr>
+
+    <nav>
+        <aside>
+            <a href=https://github.com/abanwaitucsd>GitHub</a>
+        </aside>
+        
+        <footer>
+            <p>armaan.banwait@gmail.com</p>
+        </footer>
+    </nav>
+
+    <canvas id="myCanvas" width="500" height="100"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var textDisplayed = false;
+
+        canvas.addEventListener("click", function() {
+            if (!textDisplayed) {
+                var text = "Give me a job";
+                ctx.font = "30px Arial";
+                ctx.fillStyle = "black";
+                var textWidth = ctx.measureText(text).width;
+                var x = (canvas.width - textWidth) / 2;
+                var y = canvas.height / 2;
+                ctx.fillText(text, x, y);
+                textDisplayed = true;
+            }
+        });
+    </script>
 </body>
 
 </html>
